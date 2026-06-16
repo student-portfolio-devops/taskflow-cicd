@@ -1,58 +1,66 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Add Task - TaskFlow</title>
-    <link rel="stylesheet" href="../styles/style.css">
-</head>
+    <link rel="stylesheet" href="../styles/style.css" />
+  </head>
 
-<body class="add-task-page">
+  <body>
+    <div class="container">
+      <header>
+        <nav class="navbar">
+          <div class="logo">
+            <h1>TaskFlow</h1>
+          </div>
+          <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="task-list.html">Tasks</a></li>
+            <li><a href="add-task.html" class="active">Add Task</a></li>
+            <li><a href="completed-tasks.html">Completed</a></li>
+            <li><a href="profile.html">Profile</a></li>
+            <li><a href="about.html">About</a></li>
+          </ul>
+        </nav>
+      </header>
 
-<header class="add-task-header">
-    <h1>TaskFlow</h1>
+      <main>
+        <section class="hero">
+          <div class="hero-content">
+            <h2>Add New Task</h2>
+            <p>Create and organize your new tasks with ease</p>
+          </div>
+        </section>
 
-    <nav class="add-task-nav">
-        <a href="index.html">Home</a>
-        <a href="add-task.html">Add Task</a>
-        <a href="#">Task List</a>
-        <a href="#">Task Detail</a>
-        <a href="#">About</a>
-    </nav>
-</header>
+        <section class="task-form-section">
+          <form class="add-task-form">
+            <label for="title">Task Title</label>
+            <input type="text" id="title" required />
 
-<main class="add-task-main">
+            <label for="description">Description</label>
+            <textarea id="description" rows="5" required></textarea>
 
-    <h2>Add New Task</h2>
+            <label for="date">Due Date</label>
+            <input type="date" id="date" required />
 
-    <form class="add-task-form">
+            <label for="priority">Priority</label>
+            <select id="priority" required>
+              <option value="">Select Priority</option>
+              <option>High</option>
+              <option>Medium</option>
+              <option>Low</option>
+            </select>
 
-        <label for="title">Task Title</label>
-        <input type="text" id="title" required>
+            <button type="submit" class="btn btn-primary">Add Task</button>
+          </form>
+        </section>
+      </main>
 
-        <label for="description">Description</label>
-        <textarea id="description" rows="5" required></textarea>
-
-        <label for="date">Due Date</label>
-        <input type="date" id="date" required>
-
-        <label for="priority">Priority</label>
-        <select id="priority" required>
-            <option value="">Select Priority</option>
-            <option>High</option>
-            <option>Medium</option>
-            <option>Low</option>
-        </select>
-
-        <button type="submit">Add Task</button>
-
-    </form>
-
-</main>
-
-<footer class="add-task-footer">
-    <p>TaskFlow - Task Management Application</p>
-</footer>
-
-</body>
+      <footer>
+        <p>&copy; 2026 TaskFlow. All rights reserved.</p>
+        <p>Built with CI/CD using GitHub Actions and Docker</p>
+      </footer>
+    </div>
+  </body>
 </html>

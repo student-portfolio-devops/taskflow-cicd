@@ -4,84 +4,88 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}/* ===== ABOUT PAGE STYLES ===== */
+} /* ===== ABOUT PAGE STYLES ===== */
 
 .about-hero {
-    background: linear-gradient(135deg, #e67e22, #f39c12);
+  background: linear-gradient(135deg, #e67e22, #f39c12);
+}
+
+.profile-hero {
+  background: linear-gradient(135deg, #9b59b6, #8e44ad);
 }
 
 .about-section {
-    margin-top: 2rem;
+  margin-top: 2rem;
 }
 
 .about-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 1.5rem;
 }
 
 .about-card {
-    background-color: #fff;
-    padding: 1.5rem;
-    border-radius: var(--border-radius);
-    box-shadow: var(--box-shadow);
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
 }
 
 .about-card h3 {
-    color: var(--text-dark);
-    margin-bottom: 1rem;
-    border-bottom: 2px solid #e67e22;
-    padding-bottom: 0.5rem;
+  color: var(--text-dark);
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #e67e22;
+  padding-bottom: 0.5rem;
 }
 
 .tech-list {
-    list-style: none;
+  list-style: none;
 }
 
 .tech-list li {
-    padding: 0.3rem 0;
+  padding: 0.3rem 0;
 }
 
 .team-table {
-    width: 100%;
-    border-collapse: collapse;
-    font-size: 0.9rem;
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
 }
 
 .team-table th {
-    background-color: #e67e22;
-    color: #fff;
-    padding: 0.5rem;
-    text-align: left;
+  background-color: #e67e22;
+  color: #fff;
+  padding: 0.5rem;
+  text-align: left;
 }
 
 .team-table td {
-    padding: 0.5rem;
-    border-bottom: 1px solid #ecf0f1;
+  padding: 0.5rem;
+  border-bottom: 1px solid #ecf0f1;
 }
 
 .help-steps {
-    padding-left: 1.2rem;
+  padding-left: 1.2rem;
 }
 
 .help-steps li {
-    margin-bottom: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
 /* Responsive */
 @media (width <= 768px) {
-    .profile-card {
-        flex-direction: column;
-        text-align: center;
-    }
-    
-    .profile-details {
-        grid-template-columns: 1fr;
-    }
-    
-    .about-grid {
-        grid-template-columns: 1fr;
-    }
+  .profile-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .profile-details {
+    grid-template-columns: 1fr;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 :root {
@@ -146,10 +150,6 @@ header {
   gap: 2rem;
 }
 
-.add-task-nav {
-  margin-top: 10px;
-}
-
 /* 1. Base Link Styles first */
 .nav-links a {
   color: white;
@@ -158,20 +158,10 @@ header {
   font-weight: 500;
 }
 
-.add-task-nav a {
-  color: white;
-  text-decoration: none;
-  margin: 0 10px;
-}
-
 /* 2. Pseudo-states (:hover, :active) last */
 .nav-links a:hover,
 .nav-links a.active {
   color: var(--primary-color);
-}
-
-.add-task-nav a:hover {
-  text-decoration: underline;
 }
 
 /* ===== Main Content ===== */
@@ -279,6 +269,7 @@ label {
   display: block;
   margin-bottom: 0.5rem;
   font-weight: 600;
+  color: var(--text-dark);
 }
 
 input,
@@ -288,6 +279,17 @@ select {
   padding: 0.75rem;
   border: 1px solid #bdc3c7;
   border-radius: var(--border-radius);
+  font-family: inherit;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(52 152 219 / 10%);
 }
 
 /* ===== FOOTER ===== */
@@ -300,61 +302,49 @@ footer {
   margin-top: 3rem;
 }
 
-
-/* ===================================================== */
-
 /* ===== ADD TASK PAGE (FIXED + NO CONFLICTS) ===== */
 
-/* ===================================================== */
-
-.add-task-page {
-  font-family: Arial, sans-serif;
-}
-
-.add-task-header {
-  background-color: #333;
-  color: white;
-  padding: 15px;
-  text-align: center;
-}
-
-
-.add-task-main {
-  padding: 20px;
-}
-
-.add-task-main h2 {
-  text-align: center;
-  margin-bottom: 20px;
+.task-form-section {
+  background-color: white;
+  padding: 2rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  margin: 0 auto;
+  max-width: 600px;
 }
 
 .add-task-form {
-  width: 400px;
+  width: 100%;
   margin: auto;
-  padding: 20px;
-  background-color: #f5f5f5;
-  border-radius: 10px;
+  padding: 20px 0;
 }
 
 .add-task-form input,
 .add-task-form textarea,
 .add-task-form select {
   width: 100%;
-  margin-bottom: 10px;
-  padding: 8px;
+  margin-bottom: 1.5rem;
+  padding: 0.75rem;
+  border: 1px solid #bdc3c7;
+  border-radius: var(--border-radius);
 }
 
 .add-task-form button {
   width: 100%;
-  padding: 10px;
-  background-color: #333;
+  padding: 0.75rem;
+  background-color: var(--primary-color);
   color: white;
   border: none;
+  border-radius: var(--border-radius);
   cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
 }
 
 .add-task-form button:hover {
-  background-color: #555;
+  background-color: #2980b9;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(52 152 219 / 40%);
 }
 
 .add-task-footer {
@@ -584,7 +574,11 @@ footer {
 }
 
 .profile-header {
-  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  background: linear-gradient(
+    135deg,
+    var(--primary-color),
+    var(--secondary-color)
+  );
   padding: 3rem 2rem;
   display: flex;
   flex-direction: column;
