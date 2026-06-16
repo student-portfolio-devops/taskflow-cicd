@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TaskFlow - Task Detail</title>
+    <link rel="stylesheet" href="../styles/style.css" />
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <nav class="navbar">
+                <div class="logo">
+                    <h1>TaskFlow</h1>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#">Tasks</a></li>
+                    <li><a href="add-task.html">Add Task</a></li>
+                    <li><a href="completed-tasks.html">Completed</a></li>
+                    <li><a href="#">Profile</a></li>
+                    <li><a href="#">About</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section class="task-detail-hero">
+                <div class="hero-content">
+                    <h2>Task Details</h2>
+                    <p>View and manage your task information</p>
+                </div>
+            </section>
+
+            <section class="task-detail-section">
+                <div class="task-detail-container">
+                    <div class="task-detail-header">
+                        <div class="task-title-section">
+                            <h2>📋 Complete project documentation</h2>
+                            <span class="badge status-pending">Pending</span>
+                        </div>
+                        <div class="task-actions">
+                            <button class="btn btn-secondary">Edit Task</button>
+                            <button class="btn btn-success">Mark Complete</button>
+                            <button class="btn btn-danger">Delete Task</button>
+                        </div>
+                    </div>
+
+                    <div class="task-detail-content">
+                        <div class="detail-section">
+                            <h3>Description</h3>
+                            <p>Write comprehensive documentation for the TaskFlow project including setup, usage, and API references. This documentation should be clear, concise, and easy to follow for new developers.</p>
+                        </div>
+
+                        <div class="detail-section">
+                            <h3>Task Information</h3>
+                            <div class="info-grid">
+                                <div class="info-item">
+                                    <label>Status</label>
+                                    <p>Pending</p>
+                                </div>
+                                <div class="info-item">
+                                    <label>Priority</label>
+                                    <p><span class="priority-high">High</span></p>
+                                </div>
+                                <div class="info-item">
+                                    <label>Due Date</label>
+                                    <p>June 30, 2026</p>
+                                </div>
+                                <div class="info-item">
+                                    <label>Created Date</label>
+                                    <p>June 16, 2026</p>
+                                </div>
+                                <div class="info-item">
+                                    <label>Assigned To</label>
+                                    <p>John Doe</p>
+                                </div>
+                                <div class="info-item">
+                                    <label>Progress</label>
+                                    <p>45%</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="detail-section">
+                            <h3>Progress</h3>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 45%;"></div>
+                            </div>
+                            <p class="progress-text">45% Complete</p>
+                        </div>
+
+                        <div class="detail-section">
+                            <h3>Subtasks</h3>
+                            <ul class="subtasks-list">
+                                <li>
+                                    <input type="checkbox" id="subtask1">
+                                    <label for="subtask1">Write API documentation</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="subtask2" checked>
+                                    <label for="subtask2">Create setup guide</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="subtask3" checked>
+                                    <label for="subtask3">Add usage examples</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="subtask4">
+                                    <label for="subtask4">Review and finalize</label>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="detail-section">
+                            <h3>Comments</h3>
+                            <div class="comments-section">
+                                <div class="comment">
+                                    <p class="comment-author"><strong>Sarah Smith</strong> - June 18, 2026</p>
+                                    <p class="comment-text">Great progress so far! Make sure to include troubleshooting section.</p>
+                                </div>
+                                <div class="comment">
+                                    <p class="comment-author"><strong>You</strong> - June 17, 2026</p>
+                                    <p class="comment-text">Started working on the API documentation. Will have the first draft ready by tomorrow.</p>
+                                </div>
+                            </div>
+                            <div class="add-comment">
+                                <textarea placeholder="Add a comment..."></textarea>
+                                <button class="btn btn-primary">Post Comment</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 TaskFlow. All rights reserved.</p>
+            <p>Built with CI/CD using GitHub Actions and Docker</p>
+        </footer>
+    </div>
+</body>
+
+</html>
