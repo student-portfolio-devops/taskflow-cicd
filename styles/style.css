@@ -789,12 +789,6 @@ footer {
   gap: 0.5rem;
 }
 
-.task-description {
-  color: var(--text-light);
-  line-height: 1.8;
-  font-size: 0.95rem;
-}
-
 .due-date-info {
   display: flex;
   align-items: center;
@@ -859,7 +853,7 @@ footer {
 .assignee-name {
   font-weight: 600;
   color: var(--text-dark);
-  margin: 0 0 0.25rem 0;
+  margin: 0 0 0.25rem;
   font-size: 0.95rem;
 }
 
@@ -894,9 +888,8 @@ footer {
 }
 
 .subtask-item input[type="checkbox"] {
-  width: auto;
-  height: 18px;
   width: 18px;
+  height: 18px;
   cursor: not-allowed;
   accent-color: var(--secondary-color);
 }
@@ -949,12 +942,6 @@ footer {
   background-color: #27ae60;
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(46 204 113 / 40%);
-}
-
-.btn-danger {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
 }
 
 .task-actions .btn-secondary {
