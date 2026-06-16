@@ -223,213 +223,92 @@ footer {
 }
 
 
-/* ===================================================== */
+/* Task Detail Page */
 
-/* ===== ADD TASK PAGE (FIXED + NO CONFLICTS) ===== */
-
-/* ===================================================== */
-
-.add-task-page {
-  font-family: Arial, sans-serif;
+.task-detail-page {
+  background-color: var(--light-bg);
+  min-height: calc(100vh - 180px);
+  padding-bottom: 40px;
 }
 
-.add-task-header {
-  background-color: #333;
+.task-detail-header {
+  background-color: var(--dark-bg);
   color: white;
-  padding: 15px;
+  padding: 1rem 0;
   text-align: center;
 }
 
-
-.add-task-main {
-  padding: 20px;
-}
-
-.add-task-main h2 {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.add-task-form {
-  width: 400px;
-  margin: auto;
-  padding: 20px;
-  background-color: #f5f5f5;
-  border-radius: 10px;
-}
-
-.add-task-form input,
-.add-task-form textarea,
-.add-task-form select {
-  width: 100%;
-  margin-bottom: 10px;
-  padding: 8px;
-}
-
-.add-task-form button {
-  width: 100%;
-  padding: 10px;
-  background-color: #333;
-  color: white;
-  border: none;
-  cursor: pointer;
-}
-
-.add-task-form button:hover {
-  background-color: #555;
-}
-
-.add-task-footer {
-  text-align: center;
-  padding: 15px;
-  background-color: #333;
-  color: white;
-  margin-top: 20px;
-}
-
-/* ===== COMPLETED TASKS PAGE STYLES ===== */
-
-.completed-hero {
-  background: linear-gradient(135deg, #27ae60, #2ecc71);
-}
-
-.filters {
+.task-detail-nav {
   display: flex;
+  justify-content: center;
   gap: 1rem;
-  margin-bottom: 2rem;
   flex-wrap: wrap;
+  margin-top: 0.75rem;
 }
 
-.btn-filter {
-  background-color: #ecf0f1;
-  color: var(--text-dark);
-  padding: 0.5rem 1.2rem;
-  border: none;
-  border-radius: 20px;
-  cursor: pointer;
-  transition: all 0.3s ease;
+.task-detail-nav a {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: var(--border-radius);
+  transition: background-color 0.3s ease;
 }
 
-.btn-filter:hover {
-  background-color: #bdc3c7;
-}
-
-.btn-filter.active {
+.task-detail-nav a:hover,
+.task-detail-nav a.active {
   background-color: var(--primary-color);
-  color: #fff;
 }
 
-.completed-stats {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1.5rem;
-  margin-bottom: 2.5rem;
-}
-
-.stat-card {
-  background-color: #fff;
-  padding: 1.5rem;
+.task-detail-main {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: white;
   border-radius: var(--border-radius);
-  text-align: center;
   box-shadow: var(--box-shadow);
-  transition: transform 0.3s ease;
 }
 
-.stat-card:hover {
-  transform: translateY(-5px);
-}
-
-.stat-card h3 {
-  color: var(--text-light);
-  font-size: 0.9rem;
-  margin-bottom: 0.5rem;
-}
-
-.stat-number {
+.task-detail-title {
+  margin-bottom: 1rem;
   font-size: 2rem;
-  font-weight: bold;
-  color: var(--primary-color);
-}
-
-.completed-tasks-list {
-  display: flex;
-  flex-direction: column;
-  gap: 1.2rem;
-}
-
-.task-card.completed {
-  background-color: #fff;
-  border-radius: var(--border-radius);
-  padding: 1.2rem;
-  box-shadow: var(--box-shadow);
-  border-left: 4px solid var(--secondary-color);
-  transition: all 0.3s ease;
-}
-
-.task-card.completed:hover {
-  transform: translateX(5px);
-  box-shadow: 0 4px 15px rgb(0 0 0 / 15%);
-}
-
-.task-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  margin-bottom: 0.8rem;
-}
-
-.task-header h3 {
   color: var(--text-dark);
-  font-size: 1.1rem;
 }
 
-.badge {
-  padding: 0.25rem 0.75rem;
-  border-radius: 20px;
-  font-size: 0.75rem;
-  font-weight: 600;
-}
-
-.completed-badge {
-  background-color: #d5f5e3;
-  color: #27ae60;
-}
-
-.task-description {
+.task-detail-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
   color: var(--text-light);
-  margin-bottom: 0.8rem;
-  line-height: 1.4;
 }
 
-.task-meta {
+.task-detail-meta span {
+  background: #f5f7fa;
+  padding: 0.75rem 1rem;
+  border-radius: 999px;
+  font-size: 0.95rem;
+}
+
+.task-detail-description {
+  margin-bottom: 1.5rem;
+  line-height: 1.7;
+  color: var(--text-dark);
+}
+
+.task-detail-actions {
   display: flex;
   gap: 1rem;
   flex-wrap: wrap;
-  margin-bottom: 0.8rem;
-  font-size: 0.85rem;
 }
 
-.completion-date {
-  color: #27ae60;
+.task-detail-actions .btn {
+  min-width: 140px;
 }
 
-.due-date {
-  color: var(--text-light);
-}
-
-@media (width <=768px) {
-  .task-header {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .completed-stats {
-    grid-template-columns: 1fr;
-  }
-
-  .filters {
-    justify-content: center;
-  }
+.task-detail-footer {
+  text-align: center;
+  padding: 1.5rem 0;
+  color: white;
+  background-color: var(--dark-bg);
+  margin-top: 2rem;
 }
